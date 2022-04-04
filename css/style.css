@@ -1,0 +1,127 @@
+body{
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1{
+    color: #2396bd;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+#contBotones{
+    width: 550px;
+    height: 550px;
+    background: #2396bd;
+    }
+
+#contFigura{
+    width: 550px;
+    height: 550px;
+    background: #d89d9d;
+    }
+
+#figura{
+    width: 180px;
+    height: 180px;
+    background: #ffffff;
+    margin: 0 auto;
+    margin-top: 60px;
+    transition: 1s;    /* se le da para el tiempo del cambio de cuadrado a circulo */ 
+}
+/* se llama a figura siempre con # para traer un id y se agrega circulo para unirlo y 50% sea el borde del radio */
+#figura.circulo{  
+    border-radius: 50%;
+    transform: rotate(360deg);   /* le damos un cambio mas para que rote 360 grados */
+    background: red; /* hara que al cambiar se ponga color rojo */
+  
+}
+
+#figura.rectangulo{  
+    width: 180px;
+    height: 320px;
+    transform: rotate(360deg);   /* le damos un cambio mas para que rote 360 grados */
+    background: blue; /* hara que al cambiar se ponga color rojo */
+  
+}
+
+#figura.rombo{  
+    border :3px solid #555;
+    background: black;
+    transform: rotate(45deg);
+}
+
+#fila{
+    display:flex ; /*propiedad para configuración de elemenos en 2d para que este al centro*/
+    justify-content:space-around; /*se usa para ordenar los elementos en toda la figura horizontalemnete centrar toda la figura*/
+    /*background: red; /*color de fondo*/
+    /*height: 700px;  /*alto de la figura*/
+    /*align-items: center;  /*se usa para ordenar los elementos verticalemente*/
+}
+
+#figura.subir{
+    transform: translateY(-50px);
+}
+
+#figura.diagonal{
+    transform: translateY(-60px) translateX(-80px);
+}
+
+#figura.abajo{
+    transform: translatey(60px)
+}
+#figura.izquierda{
+    transform: translatex(-70px)
+}
+#figura.derecha{
+    transform: translatex(70px)
+}
+
+button{
+    background: transparent;
+    padding: 14px  40px;
+    margin: 10px;
+    border: 1px solid #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #ffffff;
+    color: #f09297;
+}
+
+#contoperaciones button{
+    padding: 120px  0;
+}
+#contoperaciones button{
+    background-color: #f09297;
+
+}
+
+#chat {
+    background-color: crimson;
+    width:300px;
+    height: 350px;
+    position: fixed;
+    right:-300px;
+    top:20%;
+transition:1s;
+}
+
+#chat.active{
+    right: 0px;
+}
+#bchat{
+    position: fixed;
+    right: -55px;
+    top:40%;
+    background-color: #f09297;
+    transform: rotate(-90deg);
+    transition: 2s;
+}
+#bchat.active{
+    right: 230px;
+}
